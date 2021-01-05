@@ -5,3 +5,5 @@ PyJWT
 kafka-python
 pymongo
 flask_pymongo
+flask-paginate
+

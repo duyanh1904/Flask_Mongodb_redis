@@ -15,8 +15,9 @@ table = db.mytable
 
 @app.route('/')
 def home():
+    posts =[1,2,3,4,5,6,7,8,9]
     code_list = table.find().sort("_id",pymongo.DESCENDING).limit(4)
-    return render_template("base.html", code_list=code_list)
+    return render_template("base.html", code_list=code_list, posts = posts)
 
 @app.route("/add", methods = ['POST'])
 def add():
