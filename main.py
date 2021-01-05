@@ -1,6 +1,6 @@
 import pymongo
 from bson.objectid import ObjectId
-from flask import Flask, render_template, redirect, url_for, jsonify, abort, request, jsonify
+from flask import Flask, render_template, redirect, url_for, request
 from pymongo import MongoClient
 import string
 import random
@@ -13,23 +13,36 @@ db = client.mydb
 table = db.mytable
 
 
-
 @app.route('/')
 def home():
-    code_list = table.find().sort("_id",pymongo.DESCENDING)
+    code_list = table.find().sort("_id",pymongo.DESCENDING).limit(4)
     return render_template("base.html", code_list=code_list)
 
 @app.route("/add", methods = ['POST'])
 def add():
     def id_generator(size=9, chars=string.ascii_uppercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(size))
-    table.insert({"code": id_generator()})
+    table.insert_one({"code": id_generator()})
     return redirect('/')
+
+@app.route("/update")
+def updateRoute():
+    id = request.values.get("_id")
+    code_list = table.find({"_id": ObjectId(id)})
+    return render_template('update.html', code_list=code_list)
+
+
+@app.route("/action_update",methods=['post'])
+def update():
+    code = request.values.get("code")
+    id = request.values.get("_id")
+    table.update({"_id": ObjectId(id)}, {'$set': {"code": code}})
+    return redirect(url_for("home"))
 
 @app.route("/delete")
 def delete():
-    key = request.values.get("_id")
-    table.remove({"_id": ObjectId(key)})
+    id = request.values.get("_id")
+    table.remove({"_id": ObjectId(id)})
     return redirect(url_for("home"))
 
 
