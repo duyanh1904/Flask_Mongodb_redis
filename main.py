@@ -8,7 +8,6 @@ import random
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY']='LongAndRandomSecretKey'
 client = MongoClient("mongodb://127.0.0.1:27017")
 db = client.mydb
 table = db.mytable
