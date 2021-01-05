@@ -13,17 +13,17 @@ client = MongoClient("mongodb://127.0.0.1:27017")
 db = client.mydb
 table = db.mytable
 
-def id_generator(size=9, chars=string.ascii_uppercase + string.digits):
-    return ''.join(random.choice(chars) for _ in range(size))
+
 
 @app.route('/')
 def home():
     code_list = table.find().sort("_id",pymongo.DESCENDING)
-    return render_template("base.html", code_list=code_list,code = id_generator())
+    return render_template("base.html", code_list=code_list)
 
 @app.route("/add", methods = ['POST'])
 def add():
-    # code = request.values.get(id_generator())
+    def id_generator(size=9, chars=string.ascii_uppercase + string.digits):
+        return ''.join(random.choice(chars) for _ in range(size))
     table.insert({"code": id_generator()})
     return redirect('/')
 

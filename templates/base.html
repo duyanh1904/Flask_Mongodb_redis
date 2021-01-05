@@ -10,7 +10,10 @@
 </head>
 <body>
     <div style="margin-top: 50px;" class="ui container">
-        <p>my view</p>
+        <form class="ui form" action="/add" method="post">
+            <button class="ui blue button" type="submit">Add</button>
+        </form>
+
         {% for code in code_list %}
             <div class="ui segment">
                 <p class="ui big header">{{code.code }} </p>
