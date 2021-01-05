@@ -7,35 +7,44 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+
 <body>
 
     <div style="margin-top: 50px;" class="ui container">
-        {% for page_num in posts %}
-            {% if page_num %}
-                {% if posts == page_num %}
-                    <a class="ui primary button" href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
-                {% else %}
-                    <a class="ui primary button" href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
-                {% endif %}
-                {% else %}
-                ...
-            {% endif %}
-        {% endfor %}
-
-        <hr>
-        <form class="ui form" action="/add" method="post">
-            <button class="ui blue button" type="submit">Add</button>
-        </form>
+       <form class="ui form" action="/add" method="post">
+            <button class="ui blue button" type="submit">Add Code</button>
+       </form>
+        {{ pagination.info }}
+        {{ pagination.links }}
 
         {% for code in code_list %}
             <div class="ui segment">
-                <p class="ui big header">{{code.code }} </p>
+                <p class="ui big header">{{ code.code }} </p>
                 <a class="ui blue button" href="/update?_id={{ code['_id'] }}">Update</a>
                 <a class="ui red button" href="/delete?_id={{ code['_id'] }}">Delete</a>
             </div>
         {% endfor %}
+
+        {{ pagination.links }}
+
+
     </div>
 </body>
+<style>.pagination-page-info {
+    padding: .6px;
+    padding-left: 0;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+        }
+.pagination-page-info b {
+    color: black;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+}</style>
 </html>

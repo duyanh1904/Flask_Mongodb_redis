@@ -4,7 +4,7 @@ from flask import Flask, render_template, redirect, url_for, request
 from pymongo import MongoClient
 import string
 import random
-
+from flask_paginate import Pagination, get_page_parameter
 
 app = Flask(__name__)
 
@@ -12,12 +12,16 @@ client = MongoClient("mongodb://127.0.0.1:27017")
 db = client.mydb
 table = db.mytable
 
-
 @app.route('/')
 def home():
-    posts =[1,2,3,4,5,6,7,8,9]
+    search = False
+    q = request.args.get('q')
+    if q:
+        search = True
+    page = request.args.get(get_page_parameter(), type=int, default=1)
     code_list = table.find().sort("_id",pymongo.DESCENDING).limit(4)
-    return render_template("base.html", code_list=code_list, posts = posts)
+    pagination = Pagination(page=page, total=code_list.count(), record_name = code_list, search = search, css_framework='bootstrap3')
+    return render_template("base.html", code_list=code_list, pagination = pagination)
 
 @app.route("/add", methods = ['POST'])
 def add():
