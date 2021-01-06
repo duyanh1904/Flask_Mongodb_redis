@@ -18,10 +18,14 @@ def home():
     q = request.args.get('q')
     if q:
         search = True
-    page = request.args.get(get_page_parameter(), type=int, default=1)
-    code_list = table.find().sort("_id",pymongo.DESCENDING).limit(4)
-    pagination = Pagination(page=page, total=code_list.count(), record_name = code_list, search = search, css_framework='bootstrap3')
-    return render_template("base.html", code_list=code_list, pagination = pagination)
+    page = int(request.args.get('page', 1))
+    per_page = 4
+    offset = (page - 1) * per_page
+    code_list = table.find().sort("_id",pymongo.DESCENDING)
+    files_for_render = code_list.limit(per_page).skip(offset)
+    pagination = Pagination(page=page, total=code_list.count(), record_name = code_list, search = search,
+                            css_framework='bootstrap3', per_page = 4, offset = offset)
+    return render_template("base.html", code_list=files_for_render, pagination = pagination)
 
 @app.route("/add", methods = ['POST'])
 def add():

@@ -20,7 +20,8 @@
         {{ pagination.links }}
 
         {% for code in code_list %}
-            <div class="ui segment">
+            <div class="ui segment" >
+                <p>{{ loop.index + pagination.skip }}</p>
                 <p class="ui big header">{{ code.code }} </p>
                 <a class="ui blue button" href="/update?_id={{ code['_id'] }}">Update</a>
                 <a class="ui red button" href="/delete?_id={{ code['_id'] }}">Delete</a>
