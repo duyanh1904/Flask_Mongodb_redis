@@ -6,4 +6,8 @@ kafka-python
 pymongo
 flask_pymongo
 flask-paginate
+redis
+Cache
+flask_caching
+redis-server
 
