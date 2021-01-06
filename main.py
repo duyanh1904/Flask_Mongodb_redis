@@ -4,7 +4,7 @@ from flask import Flask, render_template, redirect, url_for, request
 from pymongo import MongoClient
 import string
 import random
-from flask_paginate import Pagination, get_page_parameter
+from flask_paginate import Pagination
 
 app = Flask(__name__)
 
