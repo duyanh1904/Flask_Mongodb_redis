@@ -12,8 +12,6 @@ logging.getLogger('flask_cors').level = logging.DEBUG
 CORS(app, resources=r'/api/*')
 
 if __name__ == "__main__":
-    with app.app_context():
-        table.create_index([("name", pymongo.ASCENDING), ("slug", pymongo.ASCENDING)], unique=True)
     app.run(debug=True)
 
 
