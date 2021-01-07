@@ -1,9 +1,5 @@
-from flask import Flask
-from flask import Blueprint
-from flask_restful import Api
-from src.app.Controller.route import *
-
-app = Flask(__name__)
+from Flask_Mongodb_redis.src.app.helper.connect_cache import app
+from Flask_Mongodb_redis.src.app.Controller.Controllers import MerchantIds
 
 app.register_blueprint(MerchantIds)
 
