@@ -7,12 +7,10 @@ import string
 import random
 from flask import Blueprint, Response, request, jsonify
 from bson.json_util import dumps
+import pymongo
 import logging
 
-
-
 MerchantIds = Blueprint('MerchantIds', __name__)
-
 
 @MerchantIds.route('/')
 def get_merchantId():
@@ -21,15 +19,13 @@ def get_merchantId():
     data = dumps(code)
     return Response(data, mimetype="application/json", status=200)
 
-
-@MerchantIds.route('/add', methods=['POST'])
+@MerchantIds.route('/api/add', methods=['POST'])
 def add():
     def id_generator(size=9, chars=string.ascii_uppercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(size))
 
     Base_model.table.insert_one({"code": id_generator()})
     return 'add success', 200
-
 
 @MerchantIds.route("/api/v1/update/<_id>", methods=['PUT'])
 def update(_id):
