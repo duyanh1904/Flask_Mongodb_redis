@@ -1,4 +1,3 @@
-import pymongo
 from bson.objectid import ObjectId
 from src.app.Model.connectMongo import *
 from src.app.Model.connect_cache import *
@@ -6,7 +5,7 @@ from src.app.Model.connect_redis import *
 from src.app.Model.key_config import *
 import string
 import random
-from flask import render_template, redirect, url_for, jsonify, Blueprint, Response, request
+from flask import Blueprint, Response, request
 from bson.json_util import dumps
 
 MerchantIds = Blueprint('MerchantIds', __name__)
