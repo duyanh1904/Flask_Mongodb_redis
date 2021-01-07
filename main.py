@@ -7,7 +7,7 @@ app.register_blueprint(MerchantIds)
 logging.basicConfig(level=logging.INFO)
 logging.getLogger('flask_cors').level = logging.DEBUG
 
-CORS(app, resources=r'/api/*')
+CORS(MerchantIds, resources=r'/api/*')
 
 if __name__ == "__main__":
     app.run(debug=True)
