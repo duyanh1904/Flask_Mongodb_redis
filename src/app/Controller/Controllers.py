@@ -1,15 +1,14 @@
 from bson.objectid import ObjectId
-from Flask_Mongodb_redis.src.app.Model.base_model import Base_model
-from Flask_Mongodb_redis.src.app.helper.connect_cache import *
-from Flask_Mongodb_redis.src.app.helper.connect_redis import *
-from Flask_Mongodb_redis.src.app.helper.key_config import *
+from src.app.Model.base_model import Base_model
+from src.app.helper.connect_cache import *
+from src.app.helper.connect_redis import *
+from src.app.helper.key_config import *
 import string
 import random
 from flask import Blueprint, Response, request
 from bson.json_util import dumps
 
 MerchantIds = Blueprint('MerchantIds', __name__)
-
 
 @MerchantIds.route('/')
 def get_merchantId():

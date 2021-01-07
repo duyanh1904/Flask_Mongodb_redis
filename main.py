@@ -1,5 +1,5 @@
-from Flask_Mongodb_redis.src.app.helper.connect_cache import app
-from Flask_Mongodb_redis.src.app.Controller.Controllers import MerchantIds
+from src.app.helper.connect_cache import app
+from src.app.Controller.Controllers import MerchantIds
 
 app.register_blueprint(MerchantIds)
 
