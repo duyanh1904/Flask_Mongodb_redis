@@ -9,6 +9,7 @@ from flask import Blueprint, Response, request, jsonify
 from bson.json_util import dumps
 
 
+
 MerchantIds = Blueprint('MerchantIds', __name__)
 
 @MerchantIds.route('/')
