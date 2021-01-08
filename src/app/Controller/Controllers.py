@@ -1,4 +1,6 @@
 from bson.objectid import ObjectId
+from pymongo.errors import DuplicateKeyError
+
 from src.app.Model.base_model import Base_model
 from src.app.helper.connect_cache import *
 from src.app.helper.connect_redis import *
@@ -30,7 +32,10 @@ def add():
 @MerchantIds.route("/api/update/<_id>", methods=['PUT'])
 def update(_id):
     code = request.form['code']
-    Base_model.table.update({"_id": ObjectId(_id)}, {'$set': {"code": code}})
+    try:
+        Base_model.table.update({"_id": ObjectId(_id)}, {'$set': {"code": code}})
+    except DuplicateKeyError:
+        return jsonify("Duplicate code"), 405
     return jsonify("update_success"), 200
 
 
