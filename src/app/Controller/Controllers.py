@@ -1,51 +1,50 @@
 from bson.objectid import ObjectId
 from pymongo.errors import DuplicateKeyError
-
-from src.app.Model.base_model import Base_model
+from src.app.helper.GeneratorCode import GeneratorCodes
 from src.app.helper.connect_cache import *
 from src.app.helper.connect_redis import *
 from src.app.helper.key_config import *
-import string
-import random
+from src.app.Model.base_model import BaseModel
+
 from flask import Blueprint, Response, request, jsonify
 from bson.json_util import dumps
-
-
 
 MerchantIds = Blueprint('MerchantIds', __name__)
 
 @MerchantIds.route('/')
-def get_merchantId():
-    merchantId = Base_model.table.find()
+def getMerchantId():
+    merchantId = BaseModel.table.find()
     code = list(merchantId)
     data = dumps(code)
     return Response(data, mimetype="application/json", status=200)
 
 @MerchantIds.route('/api/add', methods=['POST'])
 def add():
-    def id_generator(size=9, chars=string.ascii_uppercase + string.digits):
-        return ''.join(random.choice(chars) for _ in range(size))
-
-    Base_model.table.insert_one({"code": id_generator()})
-    return 'add success', 200
+    genCode = GeneratorCodes(9).generator()
+    try:
+        BaseModel.table.insert_one({"code": str(genCode)})
+    except DuplicateKeyError:
+        return jsonify("Duplicate code"), 405
+    return jsonify({"code": genCode}), 200
 
 @MerchantIds.route("/api/update/<_id>", methods=['PUT'])
 def update(_id):
     code = request.form['code']
     try:
-        Base_model.table.update({"_id": ObjectId(_id)}, {'$set': {"code": code}})
+        BaseModel.table.update({"_id": ObjectId(_id)}, {'$set': {"code": code}})
     except DuplicateKeyError:
-        return jsonify("Duplicate code"), 405
+        return jsonify("Duplicate code"), 405 #log in file
     return jsonify("update_success"), 200
 
 
 @MerchantIds.route("/delete/<_id>", methods=['DELETE'])
 def delete(_id):
     id = _id
-    Base_model.table.remove({"_id": ObjectId(id)})
+    BaseModel.table.remove({"_id": ObjectId(id)})
     return 'delete success', 200
+#timeout-> catch exception
 
-@MerchantIds.route('/code/<string:code>', methods=['GET'])
+@MerchantIds.route('/api/code/<string:code>', methods=['GET'])
 def get_code_id(code):
     key_code = KeyCacheRedis.KEY_CODE + str(code)
     # check key
@@ -53,7 +52,7 @@ def get_code_id(code):
         value_code = get_string(key_code)
         print("co key: ", value_code)
     else:
-        code_detail = Base_model.table.find_one({'code': code})
+        code_detail = BaseModel.table.find_one({'code': code})
         print("code_detail: ", code_detail)
         value_code = code_detail.get('code')
         print("value_code: ", value_code)
@@ -64,7 +63,7 @@ def get_code_id(code):
     if cached:
         print("cached====================:", cached)
         return cached
-    chi_tiet_code = Base_model.table.find_one({'code': code})
+    chi_tiet_code = BaseModel.table.find_one({'code': code})
     print("chi_tiet_code: ", chi_tiet_code)
     id_user = chi_tiet_code.get('_id')
     print(id_user)
