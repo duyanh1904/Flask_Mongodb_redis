@@ -1,47 +1,30 @@
-from bson.objectid import ObjectId
-from pymongo.errors import DuplicateKeyError
 from src.app.helper.GeneratorCode import GeneratorCodes
 from src.app.helper.connect_cache import *
 from src.app.helper.connect_redis import *
 from src.app.helper.key_config import *
 from src.app.Model.base_model import BaseModel
-
-from flask import Blueprint, Response, request, jsonify
-from bson.json_util import dumps
+from src.app.Model.base_model import UpdateCode
+from flask import Blueprint, request
 
 MerchantIds = Blueprint('MerchantIds', __name__)
 
-@MerchantIds.route('/')
-def getMerchantId():
-    merchantId = BaseModel.table.find()
-    code = list(merchantId)
-    data = dumps(code)
-    return Response(data, mimetype="application/json", status=200)
+@MerchantIds.route('/api/get/<code>')
+def getCode(code):
+    return BaseModel(code).getCode()
 
 @MerchantIds.route('/api/add', methods=['POST'])
 def add():
     genCode = GeneratorCodes(9).generator()
-    try:
-        BaseModel.table.insert_one({"code": str(genCode)})
-    except DuplicateKeyError:
-        return jsonify("Duplicate code"), 405
-    return jsonify({"code": genCode}), 200
+    return BaseModel(genCode).addCode()
 
 @MerchantIds.route("/api/update/<_id>", methods=['PUT'])
 def update(_id):
     code = request.form['code']
-    try:
-        BaseModel.table.update({"_id": ObjectId(_id)}, {'$set': {"code": code}})
-    except DuplicateKeyError:
-        return jsonify("Duplicate code"), 405 #log in file
-    return jsonify("update_success"), 200
+    return UpdateCode(code, _id).updateCode()
 
-
-@MerchantIds.route("/delete/<_id>", methods=['DELETE'])
-def delete(_id):
-    id = _id
-    BaseModel.table.remove({"_id": ObjectId(id)})
-    return 'delete success', 200
+@MerchantIds.route("/delete/<code>", methods=['DELETE'])
+def delete(code):
+    return BaseModel(code).deleteCode()
 #timeout-> catch exception
 
 @MerchantIds.route('/api/code/<string:code>', methods=['GET'])
