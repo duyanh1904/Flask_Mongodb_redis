@@ -19,8 +19,8 @@ def add():
 
 @MerchantIds.route("/api/update/<_id>", methods=['PUT'])
 def update(_id):
-    code = request.form['code']
-    return UpdateCode(code, _id).updateCode()
+    data = request.get_json()
+    return UpdateCode(data['code'], _id).updateCode()
 
 @MerchantIds.route("/delete/<code>", methods=['DELETE'])
 def delete(code):

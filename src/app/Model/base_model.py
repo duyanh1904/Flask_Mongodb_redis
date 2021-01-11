@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+import pymongo
 from flask import jsonify
 from bson.objectid import ObjectId
 from pymongo.errors import DuplicateKeyError
@@ -8,6 +9,7 @@ db = client.DB
 table = db.merchant_id_table
 
 class BaseModel():
+
     def __init__(self, _merchantId):
         self.merchantId = _merchantId
 
@@ -23,10 +25,14 @@ class BaseModel():
         return jsonify({"code": self.merchantId}), 200
 
     def deleteCode(self):
-        table.remove({'code': self.merchantId})
+        try:
+            table.remove({'code': self.merchantId})
+        except TimeoutError:
+            return jsonify(" Timeout Error "), 408
         return 'delete success'
 
 class UpdateCode():
+
     def __init__(self, _merchantId, _id):
         self.merchantId = _merchantId
         self.id = _id
