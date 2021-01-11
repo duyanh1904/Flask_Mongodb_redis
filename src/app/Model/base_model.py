@@ -1,11 +1,10 @@
 from pymongo import MongoClient
 import pymongo
-from flask import jsonify
+from flask import jsonify, make_response
 from bson.objectid import ObjectId
 from pymongo.errors import DuplicateKeyError
 from src.app.helper.connect_cache import CacheClient
 from src.app.helper.key_config import KeyCacheRedis
-from flask_restful import Resource
 from marshmallow import Schema, fields, validate, ValidationError
 
 
@@ -18,21 +17,21 @@ class TableValidate(Schema):
     code = fields.Str(validate=validate.Length(max=9), required=True)
     _id = fields.Str()
 
-class BaseModel(Resource):
+class BaseModel():
 
     def __init__(self, _merchantId):
         self.merchantId = _merchantId
 
     def getCode(self):
         table.find_one({'code': self.merchantId})
-        return jsonify({'code': self.merchantId})
+        return make_response(jsonify({"code": self.merchantId}), 200)
 
     def addCode(self):
         try:
             table.insert_one({'code': self.merchantId})
         except DuplicateKeyError:
             return jsonify("Duplicate code"), 405
-        return jsonify({"code": self.merchantId}), 200
+        return make_response(jsonify({"code": self.merchantId}), 200)
 
     def deleteCode(self):
         try:
@@ -41,7 +40,7 @@ class BaseModel(Resource):
             return jsonify(" Timeout Error "), 408
         return 'delete success'
 
-class UpdateCode(Resource):
+class UpdateCode():
 
     def __init__(self, _merchantId, _id):
         self.merchantId = _merchantId
