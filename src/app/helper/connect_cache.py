@@ -25,3 +25,8 @@ class CacheClient:
     def get_cache(key):
         with app.app_context():
             return cache.get(key)
+
+    @staticmethod
+    def delete_cache(key):
+        with app.app_context():
+            return cache.delete(key)
