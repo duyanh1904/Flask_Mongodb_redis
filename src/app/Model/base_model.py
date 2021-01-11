@@ -15,7 +15,7 @@ table = db.merchant_id_table
 table.create_index([('code', pymongo.ASCENDING)],unique=True)
 
 class TableValidate(Schema):
-    code = fields.Str(validate=validate.Length(max=9))
+    code = fields.Str(validate=validate.Length(max=9), required=True)
     _id = fields.Str()
 
 class BaseModel(Resource):

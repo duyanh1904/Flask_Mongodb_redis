@@ -1554,3 +1554,13 @@ INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:23:59] "PUT /api/update/5ffbc7a78feb
 DEBUG:flask_cors.extension:Request to '/api/update/5ffbc7a78febe56d22150bda' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
 DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
 INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:24:05] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/src/app/Model/base_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
