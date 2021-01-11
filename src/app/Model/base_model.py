@@ -5,14 +5,20 @@ from bson.objectid import ObjectId
 from pymongo.errors import DuplicateKeyError
 from src.app.helper.connect_cache import CacheClient
 from src.app.helper.key_config import KeyCacheRedis
+from flask_restful import Resource
+from marshmallow import Schema, fields, validate, ValidationError
+
 
 client = MongoClient("mongodb://127.0.0.1:27017")
 db = client.DB
 table = db.merchant_id_table
 table.create_index([('code', pymongo.ASCENDING)],unique=True)
 
+class TableValidate(Schema):
+    code = fields.Str(validate=validate.Length(max=9))
+    _id = fields.Str()
 
-class BaseModel():
+class BaseModel(Resource):
 
     def __init__(self, _merchantId):
         self.merchantId = _merchantId
@@ -35,7 +41,7 @@ class BaseModel():
             return jsonify(" Timeout Error "), 408
         return 'delete success'
 
-class UpdateCode():
+class UpdateCode(Resource):
 
     def __init__(self, _merchantId, _id):
         self.merchantId = _merchantId
@@ -44,6 +50,11 @@ class UpdateCode():
     def updateCode(self):
         try:
             table.update({"_id": ObjectId(self.id)}, {'$set': {"code": self.merchantId}})
+            data = ({'code': str(self.merchantId), '_id': str(self.id)})
+            try:
+                TableValidate().load(data)
+            except ValidationError:
+                return jsonify('ValidationError'), 405
             # create key config
             key_code = KeyCacheRedis.KEY_CODE + str(self.id)
             print("key_code: ", key_code)

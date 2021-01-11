@@ -1409,3 +1409,148 @@ INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 14:03:50] "GET /code/5ffbc7a78febe56d22
 DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/src/app/Controller/Controllers.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:No CORS rule matches
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 14:37:32] "GET /code/5ffbc7a78febe56d22150bda HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 14:37:34] "GET /code/5ffbc7a78febe56d22150bda HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 14:37:35] "GET /code/5ffbc7a78febe56d22150bda HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/src/app/Model/base_model.py', reloading
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:No CORS rule matches
+DEBUG:flask_cors.extension:No CORS rule matches
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 15:10:25] "GET /base HTTP/1.1" 404 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:No CORS rule matches
+DEBUG:flask_cors.extension:No CORS rule matches
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 15:14:02] "GET /base HTTP/1.1" 404 -
+DEBUG:flask_cors.extension:No CORS rule matches
+DEBUG:flask_cors.extension:No CORS rule matches
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 15:14:04] "GET /base HTTP/1.1" 404 -
+DEBUG:flask_cors.extension:No CORS rule matches
+DEBUG:flask_cors.extension:No CORS rule matches
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 15:14:05] "GET /base HTTP/1.1" 404 -
+DEBUG:flask_cors.extension:No CORS rule matches
+DEBUG:flask_cors.extension:No CORS rule matches
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 15:14:06] "GET /base HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/src/app/Model/base_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/src/app/Model/base_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:15:45] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 500 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:17:59] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 500 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:19:49] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 500 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:20:55] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 500 -
+DEBUG:flask_cors.extension:Request to '/api/update/5ffbc7a78febe56d22150bda' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:21:25] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:22:17] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 500 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:Request to '/api/update/5ffbc7a78febe56d22150bda' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:22:53] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/Flask_Mongodb_redis/src/app/Model/base_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-145-286
+DEBUG:flask_cors.extension:Request to '/api/update/5ffbc7a78febe56d22150bda' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:23:59] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 405 -
+DEBUG:flask_cors.extension:Request to '/api/update/5ffbc7a78febe56d22150bda' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2021 16:24:05] "PUT /api/update/5ffbc7a78febe56d22150bda HTTP/1.1" 200 -

@@ -4,6 +4,7 @@ from src.app.Model.base_model import BaseModel
 from src.app.Model.base_model import UpdateCode
 from flask import Blueprint, request
 
+
 MerchantIds = Blueprint('MerchantIds', __name__)
 
 @MerchantIds.route('/api/get/<code>')
@@ -27,9 +28,6 @@ def delete(code):
 @MerchantIds.route('/code/<string:_id>', methods=['GET'])
 def get_code_id(_id):
     return KeyCache().key_cache(_id)
-
-
-
 
 
 
