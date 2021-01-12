@@ -11,4 +11,3 @@ api.add_resource(UpdateMerchantId, '/api/update/<_id>')
 api.add_resource(DeleteMerchantId, '/api/delete/<code>')
 api.add_resource(CacheMerchantId, '/api/code/<_id>')
 
-
