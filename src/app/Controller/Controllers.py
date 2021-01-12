@@ -2,7 +2,7 @@ from src.app.helper.GeneratorCode import GeneratorCodes
 from src.app.Model.model_cache import *
 from src.app.Model.base_model import BaseModel
 from src.app.Model.base_model import UpdateCode
-from flask import Blueprint, request, make_response
+from flask import request, make_response
 from flask_restful import Resource
 
 class GetMerchantId(Resource):

@@ -1,6 +1,5 @@
 from flask_cors import CORS
 from src.app.CallApi.CallApis import *
-
 import logging
 
 
