@@ -1,5 +1,6 @@
 from flask_caching import Cache
 from flask import Flask
+# from Flask_Mongodb_redis.src.app.api.api_route import app
 
 cache = Cache(config={
     'CACHE_TYPE': "redis",

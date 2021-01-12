@@ -8,8 +8,9 @@ import random
 from flask import Blueprint, Response, request
 from bson.json_util import dumps
 from flask_restful import Resource
+from Flask_Mongodb_redis.src.app.helper.connect_redis import *
 
-MerchantIds = Blueprint('MerchantIds', __name__)
+# MerchantIds = Blueprint('MerchantIds', __name__)
 
 
 class GetMerchantId(Resource):
@@ -61,4 +62,8 @@ class DeleteMerchantId(Resource):
 class DetailCode(Resource):
     # @MerchantIds.route('/code/<string:_id>', methods=['GET'])
     def get(self, _id):
-        return KeyCache().key_cache(_id)
+        key_code = KeyCache().create_key(_id)
+        # check key
+        KeyCache().redis_conn(key_code, _id)
+        data = KeyCache().cache_conn(key_code, _id)
+        return data
