@@ -9,9 +9,9 @@ class GetMerchantId(Resource):
     def get(self, code):
         return BaseModel(code).getCode()
 
-class CacheMerchantId(Resource):
-    def get(self, _id):
-        return KeyCache().key_cache(_id)
+# class CacheMerchantId(Resource):
+#     def get(self, _id):
+#         return KeyCache().key_cache(_id)
 
 class AddMerchantId(Resource):
     def post(self):
@@ -28,6 +28,14 @@ class DeleteMerchantId(Resource):
     def delete(self, code):
         return BaseModel(code).deleteCode()
 
+
+class DetailCode(Resource):
+    def get(self, _id):
+        key_code = KeyCache().create_key(_id)
+        # check key
+        KeyCache().redis_conn(key_code, _id)
+        data = KeyCache().cache_conn(key_code, _id)
+        return data
 
 
 
