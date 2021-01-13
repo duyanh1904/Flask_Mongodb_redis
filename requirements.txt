@@ -1,0 +1,13 @@
+datetime
+uuid
+pymongo
+flask_pymongo
+redis
+Cache
+flask_caching
+redis-server
+flask==0.12.2
+flask_restful==0.3.6
+flask_script==2.0.6
+resources
+
