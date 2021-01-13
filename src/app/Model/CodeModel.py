@@ -1,5 +1,4 @@
 from src.app.Model.base_model import BaseModel
-from src.app.Model.ModelCache import KeyCache
 from src.app.helper.connect_cache import *
 from src.app.helper.connect_redis import *
 from src.app.helper.key_config import *
@@ -12,11 +11,44 @@ class ReqSchema(Schema):
     MID = fields.Str(required=True,validate=validate.Length(min=5))
 
 
+class KeyCache(BaseModel):
+    def __init__(self):
+        pass
+
+    def create_key(self, _merchant_id):
+        key_code = KeyCacheRedis.KEY_CODE + str(_merchant_id)
+        return key_code
+
+    def code_redis(self, key_code, _merchant_id):
+        if has_key(key_code):
+            value_code = get_string(key_code)
+            print("co key: ", value_code)
+        else:
+            code_detail = BaseModel.table.find_one({'merchantId': _merchant_id})
+            value_code = code_detail.get('code')
+        return set_string(key_code, value_code)
+
+    def code_cache(self, key_code, _merchant_id):
+        cached = CacheClient().get_cache(key_code)
+        if cached:
+            print('cached: ', cached)
+            return cached
+        code_detail = BaseModel.table.find_one({'merchant_id': _merchant_id})
+        code_user = code_detail.get('code')
+        data = {
+            'code': code_user,
+            'merchant_id': _merchant_id
+        }
+        CacheClient().set_cache(key_code, data, 60)
+        return jsonify(data)
+
+
 class CodeModel(BaseModel):
 
     def __init__(self, _code, _merchantId):
         self.merchantId = _merchantId
         self.code = _code
+
 
     def getCode(self):
         BaseModel.table.find_one({'merchantId': self.merchantId})
@@ -62,16 +94,4 @@ class CodeModel(BaseModel):
         CacheClient().set_cache(key_code, data, 10)
         return jsonify({"code": self.code, "merchantId": self.merchantId}), 200
 
-
-
-# class validateMerchantId():
-#     def __init__(self, _merchantId):
-#         self.merchantId = _merchantId
-#
-#     def validate(self):
-#         try:
-#             data = ({'MID': str(self.merchantId)})
-#             ReqSchema().load(data)
-#         except ValidationError as e:
-#             return jsonify(str(e)), 422
 

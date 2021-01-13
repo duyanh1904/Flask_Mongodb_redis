@@ -1,8 +1,10 @@
+
 from flask_cors import CORS
 import logging
 from src.app.api.api import *
+from src.app.helper.connect_cache import app
 
-# app.register_blueprint(MerchantIds)
+app.register_blueprint(MerchantIds)
 logging.basicConfig(level=logging.INFO, filename = "global.log")
 logging.getLogger('flask_cors').level = logging.DEBUG
 
