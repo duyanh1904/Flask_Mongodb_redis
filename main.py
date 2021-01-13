@@ -1,5 +1,3 @@
-from src.app.helper.connect_cache import app
-from src.app.Controller.Controllers import MerchantIds
 from flask_cors import CORS
 import logging
 from src.app.api.api import *
