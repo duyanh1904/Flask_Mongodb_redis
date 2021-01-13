@@ -4,7 +4,7 @@ from src.app.Model.CodeModel import CodeModel
 from src.app.helper.GeneratorCode import GeneratorCodes
 
 
-class routeController():
+class routeController:
 
     def getMID(self, code, merchantId):
         return CodeModel(code, merchantId).get_code()
@@ -21,14 +21,3 @@ class routeController():
 
     def cacheMID(self, code, merchantId):
         return CodeModel(code, merchantId).cache_code()
-
-
-
-
-
-
-
-
-
-
-
