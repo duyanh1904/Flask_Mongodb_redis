@@ -49,19 +49,18 @@ class CodeModel(BaseModel):
         self.merchantId = _merchantId
         self.code = _code
 
-
-    def getCode(self):
+    def get_code(self):
         BaseModel.table.find_one({'merchantId': self.merchantId})
         return jsonify({'code': self.code}, {'merchantId':self.merchantId})
 
-    def addCode(self):
+    def add_code(self):
         try:
             BaseModel.table.insert_one({'code': self.code, 'merchantId': self.merchantId})
         except DuplicateKeyError:
             return jsonify("Duplicate code"), 405
         return jsonify({"code": self.code, "merchantId": self.merchantId}), 200
 
-    def updateCode(self):
+    def update_code(self):
         try:
             BaseModel.table.update({"merchantId": self.merchantId}, {'$set': {"code": self.code}})
         except DuplicateKeyError:
@@ -79,14 +78,14 @@ class CodeModel(BaseModel):
             print('ko ton tai cache!')
         return jsonify({'code': str(self.code)}), 200
 
-    def deleteCode(self):
+    def delete_code(self):
         try:
             BaseModel.table.remove({'code': self.code})
         except TimeoutError:
             return jsonify(" Timeout Error "), 408
         return 'delete success'
 
-    def CacheCode(self):
+    def cache_code(self):
         key_code = KeyCache().create_key(self.merchantId)
         # check key
         KeyCache().code_redis(key_code, self.merchantId)
