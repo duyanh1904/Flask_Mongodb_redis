@@ -1,7 +1,7 @@
 from flask_cors import CORS
 import logging
 from src.app.api.api import *
-from src.app.helper.Redis_cache import app
+from src.app.helper.redis_cache import app
 
 app.register_blueprint(MerchantIds)
 logging.basicConfig(level=logging.INFO, filename = "global.log")

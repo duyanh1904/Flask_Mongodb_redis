@@ -1,12 +1,12 @@
-from src.app.Model.base_model import BaseModel
+from src.app.model.base_model import BaseModel
 from pymongo.errors import DuplicateKeyError
 from marshmallow import Schema, fields, validate
 from flask import jsonify
-from src.app.helper.Redis_cache import *
+from src.app.helper.redis_cache import *
+
 
 class ReqSchema(Schema):
-    MID = fields.Str(required=True,validate=validate.Length(min=5))
-
+    MID = fields.Str(required=True, validate=validate.Length(min=5))
 
 
 class CodeModel(BaseModel):
@@ -25,9 +25,10 @@ class CodeModel(BaseModel):
             data = BaseModel.table.find_one({'merchantId': merchant_id})
             return jsonify({'code1': data['code']})
 
-
     def add_code(self):
         try:
+            key_code = KeyCacheRedis.KEY_CODE + str(self.merchantId)
+            set_string(key_code, self.code)
             BaseModel.table.insert_one({'code': self.code, 'merchantId': self.merchantId})
         except DuplicateKeyError:
             return jsonify("Duplicate code"), 405
@@ -55,5 +56,3 @@ class CodeModel(BaseModel):
             except TimeoutError:
                 return jsonify(" Timeout Error "), 408
         return 'delete success'
-
-
