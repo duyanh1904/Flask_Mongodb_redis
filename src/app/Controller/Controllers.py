@@ -10,8 +10,8 @@ class routeController:
         return CodeModel.get_code(merchant_id)
 
     def add_mid(self, merchant_id):
-        gen_code = GeneratorCodes(9).generator()
-        key_code = KeyCacheRedis.KEY_CODE + str(merchant_id)
+        gen_code = GeneratorCodes(9).generator()    #create random code
+        key_code = KeyCacheRedis.KEY_CODE + str(merchant_id) #create key
         set_string(key_code, gen_code)        # store key in redis
         return CodeModel(gen_code, merchant_id).add_code()
 
