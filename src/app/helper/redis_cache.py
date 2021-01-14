@@ -47,9 +47,3 @@ def has_key(key):
 def delete_keys(key_pattern):
     for key in r.keys(key_pattern):
         return r.delete(key)
-
-
-
-
-
-

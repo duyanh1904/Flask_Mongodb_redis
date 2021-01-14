@@ -16,8 +16,8 @@ def delete(merchant_id):
         ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    message = RouteController().delete_mid(merchant_id)
-    return jsonify({'message': message}), 200
+    status = RouteController().delete_mid(merchant_id)
+    return jsonify(status), 200
 
 
 @MerchantIds.route('/api/get/<merchant_id>', methods=['GET'])
