@@ -1,6 +1,7 @@
 import string
 import random
 
+
 class GeneratorCodes():
     def __init__(self, _size):
         self.size = _size

@@ -1,73 +1,52 @@
 from flask import Blueprint, request
 from flask.json import jsonify
 from marshmallow import ValidationError
-from src.app.Controller.Controllers import *
-from src.app.Model.CodeModel import ReqSchema
-
+from Flask_Mongodb_redis.src.app.Controller.Controllers import *
+from Flask_Mongodb_redis.src.app.Model.CodeModel import ReqSchema
 
 MerchantIds = Blueprint('MerchantIds', __name__)
 
-# app.register_blueprint(MerchantIds)
 
-
-@MerchantIds.route("/api/delete/<merchantId>", methods=['DELETE'])
-def delete(merchantId):
-    data = request.get_json()
+@MerchantIds.route("/api/delete/<merchant_id>", methods=['DELETE'])
+def delete(merchant_id):
+    # data = request.get_json()
     try:
-        validateMID = ({'MID': str(data['merchantId'])})
-        ReqSchema().load(validateMID)
+        validate_mid = ({'MID': str(merchant_id)})
+        ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return routeController().deleteMID(data['code'], merchantId)
+    return RouteController().delete_merchantId(merchant_id)
 
-@MerchantIds.route('/api/get/<merchantId>', methods=['GET'])
-def get(merchantId):
-    data = request.get_json()
+
+@MerchantIds.route('/api/get/<merchant_id>', methods=['GET'])
+def get(merchant_id):
+    # data = request.get_json()
     try:
-        validateMID = ({'MID': str(data['merchantId'])})
-        ReqSchema().load(validateMID)
+        validate_mid = ({'MID': str(merchant_id)})
+        ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return routeController().getMID(data['code'], merchantId)
+    return RouteController().get_merchantId(merchant_id)
+
 
 @MerchantIds.route('/api/add', methods=['POST'])
 def add():
     data = request.get_json()
     try:
-        validateMID = ({'MID': str(data['merchantId'])})
-        ReqSchema().load(validateMID)
+        validate_mid = ({'MID': str(data['merchantId'])})
+        ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return routeController().addMID(data['merchantId'])
+    return RouteController().add_merchantID(data['merchantId'])
 
-@MerchantIds.route("/api/update/<merchantId>", methods=['PUT'])
-def update(merchantId):
+
+@MerchantIds.route("/api/update/<merchant_id>", methods=['PUT'])
+def update(merchant_id):
     data = request.get_json()
     try:
-        validateMID = ({'MID': str(data['merchantId'])})
-        ReqSchema().load(validateMID)
+        validate_mid = ({'MID': str(merchant_id)})
+        ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return routeController().updateMID(data['code'], merchantId)
-
-
-@MerchantIds.route('/api/cache/<merchantId>', methods=['GET'])
-def get_cache(merchantId):
-    data = request.get_json()
-    try:
-        validateMID = ({'MID': str(data['merchantId'])})
-        ReqSchema().load(validateMID)
-    except ValidationError as e:
-        return jsonify(str(e)), 422
-    return routeController().cacheMID(data['code'], merchantId)
-
-
-
-
-
-
-
-
-
-
+    return RouteController().update_merchatnId(data['code'], merchant_id)
 
