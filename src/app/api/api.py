@@ -16,10 +16,11 @@ def delete(merchant_id):
         ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return RouteController().delete_mid(merchant_id)
+    message = RouteController().delete_mid(merchant_id)
+    return jsonify({'message': message}), 200
 
 
-@MerchantIds.route('/api/get/<merchantId>', methods=['GET'])
+@MerchantIds.route('/api/get/<merchant_id>', methods=['GET'])
 def get(merchant_id):
     data = request.get_json()
     try:
@@ -27,7 +28,8 @@ def get(merchant_id):
         ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return RouteController().get_mid(merchant_id)
+    code = RouteController().get_mid(merchant_id)
+    return jsonify({'code': code}), 200
 
 
 @MerchantIds.route('/api/add', methods=['POST'])
@@ -38,7 +40,8 @@ def add():
         ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return RouteController().add_mid(data['merchantId'])
+    data = RouteController().add_mid(data['merchantId'])
+    return jsonify({"code": data}), 200
 
 
 @MerchantIds.route("/api/update/<merchant_id>", methods=['PUT'])
@@ -49,4 +52,5 @@ def update(merchant_id):
         ReqSchema().load(validate_mid)
     except ValidationError as e:
         return jsonify(str(e)), 422
-    return RouteController().update_mid(data['code'], merchant_id)
+    data = RouteController().update_mid(data['code'], merchant_id)
+    return jsonify({"code": data}), 200

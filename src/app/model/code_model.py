@@ -20,10 +20,10 @@ class CodeModel(BaseModel):
         key_code = KeyCacheRedis.KEY_CODE + str(merchant_id)
         if has_key(key_code) is True:
             data = r.get(key_code)
-            return jsonify({'code': data})
+            return data
         else:
             data = BaseModel.table.find_one({'merchantId': merchant_id})
-            return jsonify({'code1': data['code']})
+            return data['code']
 
     def add_code(self):
         try:
@@ -32,27 +32,25 @@ class CodeModel(BaseModel):
             BaseModel.table.insert_one({'code': self.code, 'merchantId': self.merchantId})
         except DuplicateKeyError:
             return jsonify("Duplicate code"), 405
-        return jsonify({"code": self.code, "merchantId": self.merchantId}), 200
+        return self.code
 
     def update_code(self):
         key_code = KeyCacheRedis.KEY_CODE + str(self.merchantId)
         if has_key(key_code) is True:
             r.delete(key_code)
-        else:
-            try:
-                BaseModel.table.update({"merchantId": self.merchantId}, {'$set': {"code": self.code}})
-            except DuplicateKeyError:
-                return jsonify("Duplicate code"), 405
-        return jsonify({'code': str(self.code)}), 200
+        try:
+            BaseModel.table.update({"merchantId": self.merchantId}, {'$set': {"code": self.code}})
+        except DuplicateKeyError:
+            return jsonify("Duplicate code"), 405
+        return self.code
 
     @staticmethod
     def delete_code(merchant_id):
         key_code = KeyCacheRedis.KEY_CODE + str(merchant_id)
         if has_key(key_code) is True:
             r.delete(key_code)
-        else:
-            try:
-                BaseModel.table.remove({'merchantId': merchant_id})
-            except TimeoutError:
-                return jsonify(" Timeout Error "), 408
+        try:
+            BaseModel.table.remove({'merchantId': merchant_id})
+        except TimeoutError:
+            return jsonify(" Timeout Error "), 408
         return 'delete success'

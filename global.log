@@ -4130,3 +4130,158 @@ INFO:werkzeug: * Restarting with stat
 DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 875-342-500
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/helper/generator_code.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/add' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:17:26] "POST /api/add HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/add' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:19:34] "POST /api/add HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:36:10] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/api/api.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/model/code_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:40:27] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 500 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:40:57] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/api/api.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:41:30] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:42:21] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:42:32] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:42:34] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:42:35] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:43:14] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/get/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:44:07] "GET /api/get/KDKSMKSDKSD HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/model/code_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/update/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:47:44] "PUT /api/update/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/update/KDKSMKSDKSD' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:48:07] "PUT /api/update/KDKSMKSDKSD HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/add' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:48:16] "POST /api/add HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/get/MKDMKSADMK' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:48:28] "GET /api/get/MKDMKSADMK HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Request to '/api/update/MKDMKSADMK' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:48:36] "PUT /api/update/MKDMKSADMK HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/model/code_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/add' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:50:11] "POST /api/add HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/api/api.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/update/MDSKKSDSKD9999' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:50:42] "PUT /api/update/MDSKKSDSKD9999 HTTP/1.1" 200 -
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:52:31] "DELETE /api/delete/MDSKKSDSKD9999 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/api/api.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/delete/MDSKKSDSKD9999' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:52:50] "DELETE /api/delete/MDSKKSDSKD9999 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/api/api.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/add' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:54:03] "POST /api/add HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/duyanh/Downloads/TieuLuan2020/Flask_Mongodb_redis-flask_redis/src/app/model/code_model.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:flask_cors.extension:Configuring CORS with resources: {'/api/*': {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 875-342-500
+DEBUG:flask_cors.extension:Request to '/api/update/MKDMKSADMK' matches CORS resource '/api/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/api/*': {'origins': '*'}}, 'intercept_exceptions': True, 'always_send': True}
+DEBUG:flask_cors.core:Settings CORS headers: MultiDict([('Access-Control-Allow-Origin', '*')])
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2021 16:54:38] "PUT /api/update/MKDMKSADMK HTTP/1.1" 200 -
