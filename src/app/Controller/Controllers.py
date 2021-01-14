@@ -18,5 +18,5 @@ class routeController:
     def update_mid(self, code, merchant_id):
         return CodeModel(code, merchant_id).update_code()
 
-    def delete_mid(self, code, merchant_id):
-        return CodeModel(code, merchant_id).delete_code()
+    def delete_mid(self,merchant_id):
+        return CodeModel.delete_code(merchant_id)

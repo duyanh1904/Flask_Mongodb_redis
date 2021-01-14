@@ -44,14 +44,14 @@ class CodeModel(BaseModel):
                 return jsonify("Duplicate code"), 405
         return jsonify({'code': str(self.code)}), 200
 
-
-    def delete_code(self):
-        key_code = KeyCacheRedis.KEY_CODE + str(self.merchantId)
+    @staticmethod
+    def delete_code(merchant_id):
+        key_code = KeyCacheRedis.KEY_CODE + str(merchant_id)
         if has_key(key_code) is True:
             r.delete(key_code)
         else:
             try:
-                BaseModel.table.remove({'code': self.code})
+                BaseModel.table.remove({'merchantId': merchant_id})
             except TimeoutError:
                 return jsonify(" Timeout Error "), 408
         return 'delete success'
